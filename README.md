@@ -1,4 +1,4 @@
-# Mass_Cover_Letter_Writer
+# Mass-Cover-Letter-Writer
 
 Welcome to our GitHub repository, where we introduce an innovative project that combines web crawling and ChatGPT to generate tailored cover letters for job applications at scale. In today's competitive job market, a compelling cover letter can make a significant impact. Our solution automates and streamlines the process, saving time and maximizing success chances.
 
@@ -9,6 +9,11 @@ Key advantages of our project include time savings, relevance, and engagement. U
 ![Cover Image](./public/cover_letter_writer_art.png)
 
 ## Requirements
+
+```bat
+git clone https://github.com/RyanStark223232/Mass-Cover-Letter-Writer
+cd Mass-Cover-Letter-Writer
+```
 
 This project requires Chrome to work. Make sure the chromedriver used by the selenium matches the version of your chrome
 
