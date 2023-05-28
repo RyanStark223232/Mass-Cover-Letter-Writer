@@ -6,6 +6,8 @@ By leveraging web crawling and ChatGPT, our system gathers information from job 
 
 Key advantages of our project include time savings, relevance, and engagement. Users can automate cover letter creation, ensuring letters address specific job requirements effectively. Our solution simplifies the process for job seekers, supporting them in showcasing their skills and experiences.
 
+![Cover Image](./public/cover_letter_writer_art.png)
+
 ## Requirements
 
 This project requires Chrome to work. Make sure the chromedriver used by the selenium matches the version of your chrome
@@ -18,13 +20,15 @@ pip install -r requirements.txt
 
 1. Open the Jupyter Notebook containing the code for the project.
 
-2. Locate the cell with the code provided and enter the required information as follows:
+2. Find the cell lablled with the job site you want and enter the `NAME`, `BASE_URL`, `CV_PATH`, `OPENAI_KEY`, and `Prompt` of your own. `Indeed` & `Glassdoor` have already been provided. If you want this to work with site not included, you would need to figure out the `NEW_URL_CSS` & `NEXT_PAGE_CSS` of that specific site.
 
 	- NAME: Replace "Indeed-Data Science" with a suitable name for the job site. This can be any descriptive name that helps identify the specific job site you are targeting.
 
 	- BASE_URL: Replace "https://ca.indeed.com/jobs?q=data+scientist&fl=&sort=date&vjk=cf4843c2196f979a" with the URL of the job search page on the new job site. This URL should include relevant search parameters or filters to target the desired job positions.
 
-	- NEW_URL_CSS: If needed, replace 'a[aria-label*="full details"]' with the appropriate CSS selector that identifies the links to full job details on the new job site. This ensures that the web crawler can extract the necessary information.
+	- NEW_URL_CSS: If needed, replace 'a[aria-label*="full details"]' with the appropriate CSS selector that identifies the links to full job details on the new job site. This ensures that the web crawler can extract the necessary information. Example:
+
+	![Job Detail](./public/Link_of_Job_Detail.png)
 
 	- NEXT_PAGE_CSS: If needed, replace 'a[aria-label="Next Page"]' with the appropriate CSS selector that identifies the link to the next page of job search results on the new job site. This allows the crawler to navigate through multiple pages if necessary. However, a job site does not use a new url for next page, this will not work. I am still figuring this out
 
